@@ -1,0 +1,11 @@
+{
+    "angulardoc.repoId": "03706755-32c1-4be2-a491-f3afab63cc35",
+    "angulardoc.lastSync": 0,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/*.map": true
+    }
+}

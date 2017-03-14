@@ -1,0 +1,83 @@
+<body>
+    <div class="main" style="padding:2%;margin-top:1%;">
+        <div class="col-lg-12">
+            <div class="container">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <div class="row grids text-center">
+                        <div class="view view-tenth">
+                            <!--  <a href="single.html">-->
+                            <div class="inner_content clearfix">
+                                <div class="product_image">
+                                    <img src="http://www.arrayform.com/wp-content/uploads/2017/02/user@2x.png" class="img-responsive" alt="" style="margin:0% auto;" />
+                                </div>
+                                <div class="label-product">
+                                    <span class="new">USER LOGIN</span>
+                                </div>
+                                <div class="mask" style="width:100% !important;">
+                                    <h2>Welcome User</h2>
+                                    <div class="main">
+                                        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+                                            <div class="input-group margin-bottom-20">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope mycolor"></i></span>
+                                                <input size="60" maxlength="255" class="form-control" placeholder="Email" name="UserRegistration[email]" id="UserRegistration_email" type="email" ngModel required> </div>
+
+                                            <div class="input-group margin-bottom-20">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user mycolor"></i></span>
+                                                <input size="60" maxlength="255" class="form-control" minlength="4" placeholder="User Name" name="UserRegistration[username]" #nameRef="ngModel" id="UserRegistration_username" type="text" ngModel required>{{nameRef.className}}</div>
+                                            <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)" class="alert alert-danger">
+                                                <div [hidden]="!nameRef.errors.required">Please Enter the name </div>
+                                                <div [hidden]="!nameRef.errors.minlength">Please Enter atleast 4 Charcters</div>
+
+                                            </div>
+
+                                            <div class="input-group margin-bottom-20">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock mycolor"></i></span>
+                                                <input size="60" minlength="6" maxlength="255" class="form-control" placeholder="Password" name="UserRegistration[password]" #pwdRef="ngModel" id="UserRegistration_password" type="password" ngModel required>                                                </div>
+                                            <div *ngIf="pwdRef.errors && (pwdRef.dirty || pwdRef.touched)" class="alert alert-danger">
+                                                <div [hidden]="!pwdRef.errors.required">Please Enter the Password </div>
+                                                <div [hidden]="!pwdRef.errors.minlength">Please Enter atleast 6 Charcters</div>
+
+                                            </div>
+
+                                            <div class="input-group margin-bottom-20">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user mycolor"></i></span>
+                                                <input size="60" maxlength="255" class="form-control" placeholder="First Name" name="UserRegistration[fname]" id="UserRegistration_fname" type="text" ngModel required> </div>
+                                            <div class="input-group margin-bottom-20">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user mycolor"></i></span>
+                                                <input size="60" maxlength="255" class="form-control" placeholder="Last Name" name="UserRegistration[lname]" id="UserRegistration_lname" type="text" ngModel required> </div>
+
+                                            <div class="input-group margin-bottom-20">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone mycolor"></i></span>
+                                                <input size="60" #refMobile="ngModel" pattern="^[1-9][0-9]{9}" maxlength="255" class="form-control" placeholder="Contact Number" name="UserRegistration[contactnumber]" id="UserRegistration_contactnumber" type="text" ngModel required>                                                </div>
+                                            <div *ngIf="refMobile.errors && (refMobile.dirty || refMobile.touched)" class="alert alert-danger">
+                                                <div [hidden]="!refMobile.errors.pattern">Please Enter the 10 Digits mobile number </div>
+                                                <div [hidden]="!refMobile.errors.required">Please Enter The Mobile Number</div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <button class="btn-u pull-left" type="submit">Sign Up</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--  </a> -->
+                </div>
+
+
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
+        <div class="col-lg-12">
+
+        </div>
+    </div>
+</body>

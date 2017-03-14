@@ -1,0 +1,12 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/*.js": true,
+        "**/*.map": true
+    },
+    // Controls auto save of dirty files. Accepted values:  "off", "afterDelay", "onFocusChange". If set to "afterDelay" you can configure the delay in "files.autoSaveDelay".
+    "files.autoSave": "afterDelay",
+    "angulardoc.repoId": "4502de2f-1fe8-44ed-8955-c6d33749e256",
+    "angulardoc.lastSync": 0
+}
